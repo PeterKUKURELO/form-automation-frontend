@@ -85,7 +85,7 @@ pnpm install
 BACKEND_API_URL=http://localhost:8000
 ```
 
-El navegador siempre llama a `/api/upload/`. Next.js reenvía esa ruta a
+El navegador siempre llama a `/api/upload`. Next.js reenvía esa ruta a
 `BACKEND_API_URL`, por lo que la variable no necesita ser pública. Si no se
 configura, se utiliza el servidor de pruebas
 `http://217.196.61.5:9090/api`.
