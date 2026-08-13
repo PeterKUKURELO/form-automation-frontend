@@ -2,6 +2,9 @@
 const defaultBackendApiUrl = 'http://217.196.61.5:9090/api'
 
 const nextConfig = {
+  // La API de FastAPI usa una barra final. Evita que Next/Vercel responda 308
+  // antes de aplicar el rewrite y mantiene intacto el POST multipart + SSE.
+  skipTrailingSlashRedirect: true,
   async rewrites() {
     const backendApiUrl = (
       process.env.BACKEND_API_URL || defaultBackendApiUrl
